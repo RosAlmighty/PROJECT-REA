@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EPP/TLE (3rd Quarter)</title>
@@ -12,143 +12,354 @@
     <!-- CUSTOM STYLE -->      
     <link rel="stylesheet" href="css/template-style.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">  
+    <style>
+        .page-counter {
+            font-family: 'Barlow', sans-serif;
+            font-size: 24px; /* Larger font size */
+            color: #000; /* Black text */
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+            padding: 10px 20px; /* Increased padding */
+            border-radius: 10px; /* Increased border radius */
+            display: inline-block;
+        }
+
+        .current-page, .total-pages {
+            font-weight: bold;
+            color: #000; /* Black text */
+        }
+
+        .page-text {
+            color: #000; /* Black text for "Page" */
+        }
+
+        .page-of-text {
+            color: #000; /* Black text for "of" */
+        }
+    </style>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
- </head>
+</head>
 
- <!--
-  You can change the color scheme of the page. Just change the class of the <body> tag. 
-  You can use this class: "primary-color-white", "primary-color-red", "primary-color-orange", "primary-color-blue", "primary-color-aqua", "primary-color-dark" 
-  -->
-  
-  <!--
-  Each element is able to have its own background or text color. Just change the class of the element.  
-  You can use this class: 
-  "background-white", "background-red", "background-orange", "background-blue", "background-aqua", "background-primary" 
-  "text-white", "text-red", "text-orange", "text-blue", "text-aqua", "text-primary"
-  -->
-
- <body class="size-1520 primary-color-red background-dark">
+<body class="size-1520 primary-color-red background-dark">
     <!-- HEADER -->
     <header class="grid">
-      <!-- Top Navigation -->
-      <nav class="s-12 grid background-none background-primary-hightlight">
-         <!-- logo -->
-         <a href="index.html" class="m-12 l-3 padding-2x logo">
-            <img src="img/REA.png">
-         </a>
-         <div class="top-nav s-12 l-9"> 
-            <ul class="top-ul right chevron">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="lessons-and-activities.html">Lessons and Activities</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-         </div>
-      </nav>
+        <!-- Top Navigation -->
+        <nav class="s-12 grid background-none background-primary-hightlight">
+            <!-- logo -->
+            <a href="index.html" class="m-12 l-3 padding-2x logo">
+                <img src="img/REA.png">
+            </a>
+            <div class="top-nav s-12 l-9"> 
+                <ul class="top-ul right chevron">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lessons-and-activities.html">Lessons and Activities</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-      
-      <!-- MAIN -->
-      <main role="main">
+
+    <!-- MAIN -->
+    <main role="main">
         <!-- TOP SECTION -->
         <header class="grid">
-        	<div class="s-12 padding-2x">
-            <h1 class="text-strong text-white text-center center text-size-60 text-uppercase margin-bottom-20">EPP/TLE (THIRD QUARTER)</h1>
-          </div>
+            <div class="s-12 padding-2x">
+                <h1 class="text-strong text-white text-center center text-size-60 text-uppercase margin-bottom-20">EPP/TLE (THIRD QUARTER)</h1>
+            </div>
+            <!-- Image number display -->
+            <div class="s-12 padding-2x text-center">
+                <p class="page-counter"><span class="page-text">Page</span> <span class="current-page"></span> <span class="page-of-text">of</span> <span class="total-pages"></span></p>
+            </div>
         </header>
-        
-        <!-- SECTION 1 -->
-        <section class="grid margin-bottom-20">
-          <div class="m-12 l-7 center">
 
-            <!-- LESSONS -->
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod1_Family Resources and Needs.pdf">Family Resources and Needs</h2></a>     
-          </div> 
-    
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod2_Sources of Family Income.pdf">Sources of Family Income</h2></a>    
-          </div> 
-     
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod3_Preparing and Allocating of Family Budget.pdf">Preparing and Allocating of Family Budget</h2></a> 
-          </div> 
+        <!-- Image Carousel -->
+        <div class="owl-carousel">
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-001.png" alt="Page 1"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-002.png" alt="Page 2"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-003.png" alt="Page 3"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-004.png" alt="Page 4"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-005.png" alt="Page 5"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-006.png" alt="Page 6"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-007.png" alt="Page 7"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-008.png" alt="Page 8"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-009.png" alt="Page 9"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-010.png" alt="Page 10"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-011.png" alt="Page 11"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-012.png" alt="Page 12"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-013.png" alt="Page 13"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-014.png" alt="Page 14"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-015.png" alt="Page 15"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-016.png" alt="Page 16"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-017.png" alt="Page 17"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-018.png" alt="Page 18"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-019.png" alt="Page 19"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-020.png" alt="Page 20"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-021.png" alt="Page 21"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-022.png" alt="Page 22"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-023.png" alt="Page 23"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-024.png" alt="Page 24"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-025.png" alt="Page 25"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-026.png" alt="Page 26"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-027.png" alt="Page 27"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-028.png" alt="Page 28"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-029.png" alt="Page 29"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-030.png" alt="Page 30"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-031.png" alt="Page 31"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-032.png" alt="Page 32"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-033.png" alt="Page 33"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-034.png" alt="Page 34"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-035.png" alt="Page 35"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-036.png" alt="Page 36"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-037.png" alt="Page 37"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-038.png" alt="Page 38"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-039.png" alt="Page 39"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-040.png" alt="Page 40"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-041.png" alt="Page 41"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-042.png" alt="Page 42"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-043.png" alt="Page 43"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-044.png" alt="Page 44"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-045.png" alt="Page 45"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-046.png" alt="Page 46"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-047.png" alt="Page 47"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-048.png" alt="Page 48"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-049.png" alt="Page 49"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-050.png" alt="Page 50"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-051.png" alt="Page 51"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-052.png" alt="Page 52"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-053.png" alt="Page 53"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-054.png" alt="Page 54"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-055.png" alt="Page 55"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-056.png" alt="Page 56"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-057.png" alt="Page 57"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-058.png" alt="Page 58"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-059.png" alt="Page 59"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-060.png" alt="Page 60"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-061.png" alt="Page 61"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-062.png" alt="Page 62"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-063.png" alt="Page 63"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-064.png" alt="Page 64"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-065.png" alt="Page 65"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-066.png" alt="Page 66"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-067.png" alt="Page 67"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-068.png" alt="Page 68"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-069.png" alt="Page 69"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-070.png" alt="Page 70"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-071.png" alt="Page 71"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-072.png" alt="Page 72"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-073.png" alt="Page 73"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-074.png" alt="Page 74"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-075.png" alt="Page 75"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-076.png" alt="Page 76"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-077.png" alt="Page 77"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-078.png" alt="Page 78"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-079.png" alt="Page 79"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-080.png" alt="Page 80"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-081.png" alt="Page 81"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-082.png" alt="Page 82"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-083.png" alt="Page 83"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-084.png" alt="Page 84"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-085.png" alt="Page 85"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-086.png" alt="Page 86"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-087.png" alt="Page 87"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-088.png" alt="Page 88"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-089.png" alt="Page 89"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-090.png" alt="Page 90"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-091.png" alt="Page 91"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-092.png" alt="Page 92"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-093.png" alt="Page 93"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-094.png" alt="Page 94"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-095.png" alt="Page 95"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-096.png" alt="Page 96"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-097.png" alt="Page 97"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-098.png" alt="Page 98"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-099.png" alt="Page 99"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-100.png" alt="Page 110"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-101.png" alt="Page 101"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-102.png" alt="Page 102"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-103.png" alt="Page 103"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-104.png" alt="Page 104"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-105.png" alt="Page 105"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-106.png" alt="Page 106"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-107.png" alt="Page 107"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-108.png" alt="Page 108"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-109.png" alt="Page 109"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-110.png" alt="Page 110"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-111.png" alt="Page 111"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-112.png" alt="Page 112"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-113.png" alt="Page 113"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-114.png" alt="Page 114"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-115.png" alt="Page 115"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-116.png" alt="Page 116"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-117.png" alt="Page 117"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-118.png" alt="Page 118"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-119.png" alt="Page 119"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-120.png" alt="Page 120"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-121.png" alt="Page 121"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-122.png" alt="Page 122"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-123.png" alt="Page 123"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-124.png" alt="Page 124"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-125.png" alt="Page 125"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-126.png" alt="Page 126"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-127.png" alt="Page 127"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-128.png" alt="Page 128"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-129.png" alt="Page 129"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-130.png" alt="Page 130"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-131.png" alt="Page 131"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-132.png" alt="Page 132"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-133.png" alt="Page 133"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-134.png" alt="Page 134"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-135.png" alt="Page 135"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-136.png" alt="Page 136"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-137.png" alt="Page 137"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-138.png" alt="Page 138"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-139.png" alt="Page 139"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-140.png" alt="Page 140"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-141.png" alt="Page 141"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-142.png" alt="Page 142"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-143.png" alt="Page 143"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-144.png" alt="Page 144"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-145.png" alt="Page 145"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-146.png" alt="Page 146"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-147.png" alt="Page 147"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-148.png" alt="Page 148"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-149.png" alt="Page 149"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-150.png" alt="Page 150"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-151.png" alt="Page 151"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-152.png" alt="Page 152"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-153.png" alt="Page 153"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-154.png" alt="Page 154"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-155.png" alt="Page 155"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-156.png" alt="Page 156"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-157.png" alt="Page 157"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-158.png" alt="Page 158"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-159.png" alt="Page 159"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-160.png" alt="Page 160"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-161.png" alt="Page 161"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-162.png" alt="Page 162"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-163.png" alt="Page 163"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-164.png" alt="Page 164"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-165.png" alt="Page 165"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-166.png" alt="Page 166"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-167.png" alt="Page 167"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-168.png" alt="Page 168"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-169.png" alt="Page 169"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-170.png" alt="Page 170"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-171.png" alt="Page 171"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-172.png" alt="Page 172"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-173.png" alt="Page 173"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-174.png" alt="Page 174"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-175.png" alt="Page 175"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-176.png" alt="Page 176"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-178.png" alt="Page 177"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-179.png" alt="Page 178"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-180.png" alt="Page 179"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-181.png" alt="Page 180"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-182.png" alt="Page 181"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-183.png" alt="Page 182"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-184.png" alt="Page 183"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-185.png" alt="Page 184"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-186.png" alt="Page 185"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-187.png" alt="Page 186"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-188.png" alt="Page 187"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-189.png" alt="Page 188"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-190.png" alt="Page 189"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-191.png" alt="Page 190"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-192.png" alt="Page 191"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-193.png" alt="Page 192"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-193.png" alt="Page 193"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-194.png" alt="Page 194"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-195.png" alt="Page 195"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-196.png" alt="Page 196"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-197.png" alt="Page 197"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-198.png" alt="Page 198"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-199.png" alt="Page 199"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-200.png" alt="Page 200"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-201.png" alt="Page 201"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-202.png" alt="Page 202"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-203.png" alt="Page 203"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-204.png" alt="Page 204"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-205.png" alt="Page 205"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-206.png" alt="Page 206"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-207.png" alt="Page 207"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-208.png" alt="Page 208"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-209.png" alt="Page 209"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-210.png" alt="Page 210"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-211.png" alt="Page 211"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-212.png" alt="Page 212"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-213.png" alt="Page 213"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-214.png" alt="Page 214"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-215.png" alt="Page 215"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-216.png" alt="Page 216"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-217.png" alt="Page 217"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-218.png" alt="Page 218"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-219.png" alt="Page 219"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-220.png" alt="Page 220"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-221.png" alt="Page 221"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-222.png" alt="Page 222"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-223.png" alt="Page 223"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-224.png" alt="Page 224"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-225.png" alt="Page 225"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-226.png" alt="Page 226"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-227.png" alt="Page 227"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-228.png" alt="Page 228"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-229.png" alt="Page 229"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-230.png" alt="Page 230"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-231.png" alt="Page 231"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-232.png" alt="Page 232"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-233.png" alt="Page 233"></div>
+            <div class="item"><img src="img\LESSONS3\EPP\EPP-234.png" alt="Page 234"></div>
 
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod4_Identifying and Classifying Sewing Tools and Materials.pdf">Identifying and Classifying Sewing Tools and Materials</h2></a> 
-          </div> 
-
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod5_Project Plan for Household Linens.pdf">Project Plan for Household Linens</h2></a> 
-          </div> 
-
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod6_Drafting Pattern for Household Linens.pdf">Drafting Pattern for Household Linens</h2></a>  
-          </div> 
-
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod7_Sewing Household Linens and Product Assessment.pdf">Sewing Household Linens and Product Assessment</h2></a> 
-          </div> 
- 
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod8_Marketing of Household Linens.pdf">Marketing of Household Linens</h2></a>  
-          </div> 
-
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod9_Different Ways of Food Preservation.pdf">Different Ways of Food Preservation</h2></a>   
-          </div> 
-
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod10_Using Tools and Equipment in Food Preservation.pdf">Using Tools and Equipment in Food Preservation</h2></a>
-          </div> 
-
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod11_Principles and Skills in Food Preservation.pdf">Principles and Skills in Food Preservation</h2></a>
-          </div> 
-
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod12_Conducting Simple Research.pdf">Conducting Simple Research</h2></a>
-          </div> 
-
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod13_Assessing Preserved Processed Food Using Rubric.pdf">Assessing Preserved Processed Food Using Rubric</h2></a>
-          </div> 
-
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\HE 6\HE6_q1_mod14_ Preserved Food.pdf">Preserved Food</h2></a>
-          </div>                  
-         <!-- /LESSONS -->
-        </section>
-      </main>
-      
-       
-      
-      <!-- FOOTER -->
-      <footer class="grid">
-        <!-- Footer - top -->
-        <!-- Image-->
-        <div class="s-12 l-3 m-row-3 margin-bottom background-image" style="background-image:url(img/ME.png)"></div>
-        
-        <div class="s-12 m-9 l-3 padding-2x margin-bottom background-dark">
-           <h2 class="text-strong text-uppercase">the developer</h2>
-           <p>RICK OSMAR E. APACIONADO is a Public Elementary School Teacher at Doongan Ibaba Elementary School with a Master's Degree in Educational Management. He is a passionate advocate of "No Child is left behind" inspiring him to find ways in elevating the learners literacy and numeracy skills, so as their classroom engagement and behavior.</p>
+         
+         
         </div>
-        
-        
-        <div class="s-12 m-9 l-3 padding-2x margin-bottom background-dark">
-           <h2 class="text-strong text-uppercase">Contact</h2>
-           <p><b class="text-primary margin-right-10">M</b> <a class="text-primary-hover" href="mailto:rosapacionado@gmail.com">rosapacionado@gmail.com</a></p>
-           <p><b class="text-primary margin-right-10">M</b> <a class="text-primary-hover" href="mailto:rickosmar.apacionado@deped.gov.ph">rickosmar.apacionado@deped.gov.ph</a></p>
-        </div>
-        
-        <!-- Footer - bottom -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content -->
         <div class="s-12 text-center margin-bottom">
-          <p class="text-size-12">Copyright 2023, REA - Your School Buddy</p>
+            <p class="text-size-12">
+<br>
+<br>
+Copyright 2023, REA - Your School Buddy</p>
         </div>
-      </footer>                                                                    
-      <script type="text/javascript" src="js/responsee.js"></script>
-      <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
-      <script type="text/javascript" src="js/template-scripts.js"></script>
+    </footer>
 
-   </body>
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script>
+    <script>
+        $(document).ready(function(){
+            var owl = $(".owl-carousel");
+            var totalImages = owl.find('.item').length;
+
+            owl.owlCarousel({
+                loop: false, // Disable looping
+                margin: 10,
+                nav: true, // Enable navigation
+                navText: ["", ""], // Set navigation text to empty strings
+                dots: false, // Disable dots
+                autoplay: false, // Disable autoplay
+                items: 1, // Display one image at a time
+                mouseDrag: true, // Enable mouse drag
+                touchDrag: true, // Enable touch drag
+                onInitialized: updateNumber,
+                onTranslated: updateNumber
+            });
+
+            function updateNumber(event) {
+                var currentPage = event.item.index + 1;
+                var totalPages = totalImages === 1 ? 1 : event.item.count;
+                $(".current-page").text(currentPage);
+                $(".total-pages").text(totalPages);
+                
+                // Disable loop if last image is reached
+                if (currentPage === totalPages) {
+                    owl.trigger('stop.owl.carousel');
+                }
+            }
+        });
+    </script>
+</body>
 </html>
