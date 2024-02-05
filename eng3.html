@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ENGLISH (3rd Quarter)</title>
@@ -12,92 +12,186 @@
     <!-- CUSTOM STYLE -->      
     <link rel="stylesheet" href="css/template-style.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow:100,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">  
+    <style>
+        .page-counter {
+            font-family: 'Barlow', sans-serif;
+            font-size: 24px; /* Larger font size */
+            color: #000; /* Black text */
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+            padding: 10px 20px; /* Increased padding */
+            border-radius: 10px; /* Increased border radius */
+            display: inline-block;
+        }
+
+        .current-page, .total-pages {
+            font-weight: bold;
+            color: #000; /* Black text */
+        }
+
+        .page-text {
+            color: #000; /* Black text for "Page" */
+        }
+
+        .page-of-text {
+            color: #000; /* Black text for "of" */
+        }
+    </style>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
- </head>
+</head>
 
- <!--
-  You can change the color scheme of the page. Just change the class of the <body> tag. 
-  You can use this class: "primary-color-white", "primary-color-red", "primary-color-orange", "primary-color-blue", "primary-color-aqua", "primary-color-dark" 
-  -->
-  
-  <!--
-  Each element is able to have its own background or text color. Just change the class of the element.  
-  You can use this class: 
-  "background-white", "background-red", "background-orange", "background-blue", "background-aqua", "background-primary" 
-  "text-white", "text-red", "text-orange", "text-blue", "text-aqua", "text-primary"
-  -->
-
- <body class="size-1520 primary-color-red background-dark">
+<body class="size-1520 primary-color-red background-dark">
     <!-- HEADER -->
     <header class="grid">
-      <!-- Top Navigation -->
-      <nav class="s-12 grid background-none background-primary-hightlight">
-         <!-- logo -->
-         <a href="index.html" class="m-12 l-3 padding-2x logo">
-            <img src="img/REA.png">
-         </a>
-         <div class="top-nav s-12 l-9"> 
-            <ul class="top-ul right chevron">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="lessons-and-activities.html">Lessons and Activities</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-         </div>
-      </nav>
+        <!-- Top Navigation -->
+        <nav class="s-12 grid background-none background-primary-hightlight">
+            <!-- logo -->
+            <a href="index.html" class="m-12 l-3 padding-2x logo">
+                <img src="img/REA.png">
+            </a>
+            <div class="top-nav s-12 l-9"> 
+                <ul class="top-ul right chevron">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lessons-and-activities.html">Lessons and Activities</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-      
-      <!-- MAIN -->
-      <main role="main">
+
+    <!-- MAIN -->
+    <main role="main">
         <!-- TOP SECTION -->
         <header class="grid">
-        	<div class="s-12 padding-2x">
-            <h1 class="text-strong text-white text-center center text-size-60 text-uppercase margin-bottom-20">ENGLISH (THIRD QUARTER)</h1>
-          </div>
+            <div class="s-12 padding-2x">
+                <h1 class="text-strong text-white text-center center text-size-60 text-uppercase margin-bottom-20">ENGLISH (THIRD QUARTER)</h1>
+            </div>
+            <!-- Image number display -->
+            <div class="s-12 padding-2x text-center">
+                <p class="page-counter"><span class="page-text">Page</span> <span class="current-page"></span> <span class="page-of-text">of</span> <span class="total-pages"></span></p>
+            </div>
         </header>
-        
-        <!-- SECTION 1 -->
-        <section class="grid margin-bottom-20">
-          <div class="m-12 l-7 center">
-            <!-- LESSONS -->
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="sample.html">Present a Coherent, Comprehensive Report on Differing Viewpoints on an Issue</h2></a>         
-            <div class="s-12 padding-2x background-white text-center">                  
-              <a h2 class="text-size-20 margin-bottom-10 text-strong text-uppercase text-dark" href="D:\REA\LESSONS\3\ENGLISH 6-20220721\ENG6 Q3 MODULE2.pdf">Evaluate Narratives Based on How the Author Developed the Elements</h2></a>         
-            <div class="s-12 padding-2x background-white text-center">                     
-          </div>                  
-        </section>
-      </main>
-      
-       
-      
-      <!-- FOOTER -->
-      <footer class="grid">
-        <!-- Footer - top -->
-        <!-- Image-->
-        <div class="s-12 l-3 m-row-3 margin-bottom background-image" style="background-image:url(img/ME.png)"></div>
-        
-        <div class="s-12 m-9 l-3 padding-2x margin-bottom background-dark">
-           <h2 class="text-strong text-uppercase">the developer</h2>
-           <p>RICK OSMAR E. APACIONADO is a Public Elementary School Teacher at Doongan Ibaba Elementary School with a Master's Degree in Educational Management. He is a passionate advocate of "No Child is left behind" inspiring him to find ways in elevating the learners literacy and numeracy skills, so as their classroom engagement and behavior.</p>
-        </div>
-        
-        
-        <div class="s-12 m-9 l-3 padding-2x margin-bottom background-dark">
-           <h2 class="text-strong text-uppercase">Contact</h2>
-           <p><b class="text-primary margin-right-10">M</b> <a class="text-primary-hover" href="mailto:rosapacionado@gmail.com">rosapacionado@gmail.com</a></p>
-           <p><b class="text-primary margin-right-10">M</b> <a class="text-primary-hover" href="mailto:rickosmar.apacionado@deped.gov.ph">rickosmar.apacionado@deped.gov.ph</a></p>
-        </div>
-        
-        <!-- Footer - bottom -->
-        <div class="s-12 text-center margin-bottom">
-          <p class="text-size-12">Copyright 2023, REA - Your School Buddy</p>
-        </div>
-      </footer>                                                                    
-      <script type="text/javascript" src="js/responsee.js"></script>
-      <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
-      <script type="text/javascript" src="js/template-scripts.js"></script>
 
-   </body>
+        <!-- Image Carousel -->
+        <div class="owl-carousel">
+            <div class="item"><img src="ENGLISH\ENGLISH-001.png" alt="Page 1"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-002.png" alt="Page 2"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-003.png" alt="Page 3"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-004.png" alt="Page 4"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-005.png" alt="Page 5"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-006.png" alt="Page 6"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-007.png" alt="Page 7"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-008.png" alt="Page 8"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-009.png" alt="Page 9"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-010.png" alt="Page 10"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-011.png" alt="Page 11"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-012.png" alt="Page 12"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-013.png" alt="Page 13"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-014.png" alt="Page 14"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-015.png" alt="Page 15"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-016.png" alt="Page 16"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-017.png" alt="Page 17"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-018.png" alt="Page 18"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-019.png" alt="Page 19"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-020.png" alt="Page 20"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-021.png" alt="Page 21"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-022.png" alt="Page 22"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-023.png" alt="Page 23"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-024.png" alt="Page 24"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-025.png" alt="Page 25"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-026.png" alt="Page 26"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-027.png" alt="Page 27"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-028.png" alt="Page 28"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-029.png" alt="Page 29"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-030.png" alt="Page 30"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-031.png" alt="Page 31"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-032.png" alt="Page 32"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-033.png" alt="Page 33"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-034.png" alt="Page 34"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-035.png" alt="Page 35"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-036.png" alt="Page 36"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-037.png" alt="Page 37"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-038.png" alt="Page 38"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-039.png" alt="Page 39"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-040.png" alt="Page 40"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-041.png" alt="Page 41"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-042.png" alt="Page 42"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-043.png" alt="Page 43"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-044.png" alt="Page 44"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-045.png" alt="Page 45"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-046.png" alt="Page 46"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-047.png" alt="Page 47"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-048.png" alt="Page 48"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-049.png" alt="Page 49"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-050.png" alt="Page 50"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-051.png" alt="Page 51"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-052.png" alt="Page 52"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-053.png" alt="Page 53"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-054.png" alt="Page 54"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-055.png" alt="Page 55"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-056.png" alt="Page 56"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-057.png" alt="Page 57"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-058.png" alt="Page 58"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-059.png" alt="Page 59"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-060.png" alt="Page 60"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-061.png" alt="Page 61"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-062.png" alt="Page 62"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-063.png" alt="Page 63"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-064.png" alt="Page 64"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-065.png" alt="Page 65"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-066.png" alt="Page 66"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-067.png" alt="Page 67"></div>
+            <div class="item"><img src="ENGLISH\ENGLISH-068.png" alt="Page 68"></div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content -->
+        <div class="s-12 text-center margin-bottom">
+            <p class="text-size-12">
+<br>
+<br>
+Copyright 2023, REA - Your School Buddy</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script>
+    <script>
+        $(document).ready(function(){
+            var owl = $(".owl-carousel");
+            var totalImages = owl.find('.item').length;
+
+            owl.owlCarousel({
+                loop: false, // Disable looping
+                margin: 10,
+                nav: true, // Enable navigation
+                navText: ["", ""], // Set navigation text to empty strings
+                dots: false, // Disable dots
+                autoplay: false, // Disable autoplay
+                items: 1, // Display one image at a time
+                mouseDrag: true, // Enable mouse drag
+                touchDrag: true, // Enable touch drag
+                onInitialized: updateNumber,
+                onTranslated: updateNumber
+            });
+
+            function updateNumber(event) {
+                var currentPage = event.item.index + 1;
+                var totalPages = totalImages === 1 ? 1 : event.item.count;
+                $(".current-page").text(currentPage);
+                $(".total-pages").text(totalPages);
+                
+                // Disable loop if last image is reached
+                if (currentPage === totalPages) {
+                    owl.trigger('stop.owl.carousel');
+                }
+            }
+        });
+    </script>
+</body>
 </html>
