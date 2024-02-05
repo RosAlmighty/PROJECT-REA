@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH NINJA: The Number Conqueror</title>
+    <style>
+        body {
+            background-image: url('symbols.png');
+            background-size: cover; /* Cover the entire viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #container h1 {
+            margin-bottom: 20px;
+        }
+        #container button {
+            background-color: #4CAF50; /* Green */
+            color: #FFFFFF; /* White */
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #container button:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+        #goBackButton {
+            background-color: #FF0000; /* Red */
+            margin-top: 20px; /* Added margin to separate from other buttons */
+        }
+        #problemBox {
+            background-color: #f0f0f0; /* Light Grey */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.5s ease; /* Smooth transition effect */
+        }
+        #problem {
+            font-size: 36px; /* Larger text */
+            font-weight: bold;
+            color: #333; /* Darker Grey */
+            text-align: center; /* Center alignment */
+            margin-bottom: 20px;
+        }
+        #correctCount {
+            color: red; /* Red color */
+            font-size: 24px; /* Larger font size */
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>MATH NINJA: The Number Conqueror</h1>
+        <div id="difficultySelection">
+            <h2>Select Difficulty Level</h2>
+            <button onclick="setLevel('easy')">Easy</button>
+            <button onclick="setLevel('medium')">Medium</button>
+            <button onclick="setLevel('hard')">Hard</button>
+        </div>
+        
+        <div id="gameContainer" style="display: none;">
+            <div id="problemBox">
+                <p id="questionNumber"></p> <!-- Updated to display the question number -->
+                <p id="problem"></p>
+            </div>
+            <input type="text" id="userAnswer">
+            <br> <!-- Line break to move the button to the next line -->
+            <button onclick="checkAnswer()" id="submitButton">Submit Answer</button>
+            <p id="result"></p>
+            <p id="correctCount">Correct Answers: <span id="correctCountSpan">0</span></p>
+            <p id="score"></p>
+            <button id="goBackButton" onclick="goToDifficultySelection()">Go Back to Difficulty Selection</button>
+            <footer>&copy; 2024 Math Ninja</footer>
+        </div>
+    </div>
+
+    <script>
+        let level;
+        let questions;
+        let currentQuestionIndex;
+        let correctCount;
+        let totalQuestions;
+
+        function setLevel(selectedLevel) {
+            level = selectedLevel;
+            loadQuestions();
+            displayNextQuestion(); // Call this function after setting the level
+            document.getElementById('difficultySelection').style.display = 'none';
+            document.getElementById('gameContainer').style.display = 'block';
+        }
+
+        function goToDifficultySelection() {
+            document.getElementById('difficultySelection').style.display = 'block';
+            document.getElementById('gameContainer').style.display = 'none';
+        }
+
+        function loadQuestions() {
+            questions = [];
+
+            if (level === 'easy') {
+                questions = [
+                    { question: "2 + 2", answer: 4 },
+                    { question: "5 x 5", answer: 25 },
+                    { question: "10 ÷ 2", answer: 5 },
+                    { question: "8 - 3", answer: 5 },
+                    { question: "6 x 3", answer: 18 },
+                    { question: "4 + 4", answer: 8 },
+                    { question: "9 x 3", answer: 27 },
+                    { question: "7 ÷ 2", answer: 3.5 },
+                    { question: "12 - 5", answer: 7 },
+                    { question: "2 x 7", answer: 14 },
+                    // Add more questions here...
+                ];
+            } else if (level === 'medium') {
+                questions = [
+                    { question: "12 + 7", answer: 19 },
+                    { question: "25 - 11", answer: 14 },
+                    { question: "9 x 4", answer: 36 },
+                    { question: "36 ÷ 6", answer: 6 },
+                    { question: "20 x 2", answer: 40 },
+                    { question: "18 + 5", answer: 23 },
+                    { question: "7 x 8", answer: 56 },
+                    { question: "54 ÷ 9", answer: 6 },
+                    { question: "15 - 8", answer: 7 },
+                    { question: "9 x 9", answer: 81 },
+                    // Add more questions here...
+                ];
+            } else if (level === 'hard') {
+                questions = [
+                    { question: "63 + 28", answer: 91 },
+                    { question: "85 - 42", answer: 43 },
+                    { question: "12 x 8", answer: 96 },
+                    { question: "99 ÷ 11", answer: 9 },
+                    { question: "121 - 73", answer: 48 },
+                    { question: "56 + 24", answer: 80 },
+                    { question: "84 - 32", answer: 52 },
+                    { question: "13 x 9", answer: 117 },
+                    { question: "108 ÷ 9", answer: 12 },
+                    { question: "144 - 79", answer: 65 },
+                    // Add more questions here...
+                ];
+            }
+
+            // Shuffle the questions for a random order
+            questions.sort(() => Math.random() - 0.5);
+
+            currentQuestionIndex = 0;
+            correctCount = 0;
+            totalQuestions = questions.length; // Store the total number of questions
+        }
+
+        function displayNextQuestion() {
+            document.getElementById('userAnswer').value = ""; // Clear the input field
+            if (currentQuestionIndex < totalQuestions) { // Use totalQuestions instead of questions.length
+                document.getElementById('questionNumber').innerText = `Question ${currentQuestionIndex + 1}`; // Display question number
+                
+                // Hide the problem box
+                document.getElementById('problemBox').style.opacity = 0;
+
+                // Delay the display of the new question to allow for transition
+                setTimeout(() => {
+                    document.getElementById('problem').innerText = questions[currentQuestionIndex].question;
+                    
+                    // Show the problem box with smooth transition effect
+                    document.getElementById('problemBox').style.opacity = 1;
+                }, 50); // Delay in milliseconds
+            } else {
+                showFinalResult();
+            }
+        }
+
+        function checkAnswer() {
+            const userAnswer = document.getElementById('userAnswer').value;
+            if (!userAnswer) {
+                alert("Please enter an answer before submitting.");
+                return;
+            }
+
+            const parsedUserAnswer = parseFloat(userAnswer);
+            const currentQuestion = questions[currentQuestionIndex];
+            const isCorrect = parsedUserAnswer === currentQuestion.answer;
+            const resultText = isCorrect ? "Correct!" : "Wrong!";
+            document.getElementById('result').innerText = resultText;
+
+            if (isCorrect) {
+                correctCount++;
+            }
+
+            updateScore();
+            currentQuestionIndex++;
+            displayNextQuestion();
+        }
+
+        function updateScore() {
+            document.getElementById('correctCountSpan').innerText = correctCount;
+        }
+
+        function showFinalResult() {
+            let scoreText = `You answered ${correctCount} out of 10 questions correctly.`;
+
+            // Display final result in the problem box
+            document.getElementById('problem').innerText = scoreText;
+
+            // Hide question number
+            document.getElementById('questionNumber').style.display = 'none';
+
+            // Hide the result that is not inside the question box
+            document.getElementById('result').style.display = 'none';
+
+            // Hide the score message
+            document.getElementById('score').style.display = 'none';
+
+            // Hide the answer input box
+            document.getElementById('userAnswer').style.display = 'none';
+
+            // Hide the submit button
+            document.getElementById('submitButton').style.display = 'none';
+
+            // Hide the correct counter
+            document.getElementById('correctCount').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
